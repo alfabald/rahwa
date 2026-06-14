@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Für Dich Rahwa❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+    min-height:100vh;
+    overflow-x:hidden;
+    color:#5a3d42;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:50px auto;
+    z-index:2;
+    position:relative;
+}
+
+.card{
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 40px rgba(0,0,0,.15);
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1{
+    text-align:center;
+    color:#c86b85;
+    margin-bottom:15px;
+    font-size:2rem;
+}
+
+.subtitle{
+    text-align:center;
+    margin-bottom:30px;
+    color:#8d5b68;
+}
+
+p{
+    line-height:1.9;
+    margin-bottom:25px;
+    font-size:1.1rem;
+    text-align:center;
+}
+
+.btn{
+    display:block;
+    margin:30px auto;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background:#c86b85;
+    color:white;
+    font-size:1rem;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+#surprise{
+    text-align:center;
+    color:#c86b85;
+    font-size:1.2rem;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    color:#8d5b68;
+}
+
+.heart{
+    position:fixed;
+    font-size:20px;
+    animation:floatUp linear infinite;
+    opacity:.8;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+
+.flower{
+    position:fixed;
+    font-size:22px;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-100px) rotate(0deg);
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>🌹Für Dich Rahwa🌹</h1>
+
+<p class="subtitle" id="typing"></p>
+
+<p>
+Ich habe gerade durch Zufall gesehen, dass du letzten Freitag Geburtstag hattest – und ich möchte dir ganz herzlich nachträglich alles Gute wünschen. 🎂🌹
+</p>
+
+<p>
+Ich hoffe, dass du trotz deinem vollen Alltag mit Studium und Arbeit zumindest ein wenig Zeit hattest, um den Tag auf eine schöne Art zu genießen. ✨ Du hast es dir wirklich verdient, nach all der Anstrengung der letzten Zeit. 💐
+</p>
+
+<p>
+Ehrlich gesagt hätte ich dir gerne schon am Freitag gratuliert, aber ich habe es leider erst heute mitbekommen. Das tut mir aufrichtig leid, weil du mir nicht egal bist – ganz im Gegenteil. ❤️
+</p>
+
+<p>
+Ich möchte, dass du weißt, dass ich in den letzten Tagen öfter an dich gedacht habe – nicht nur wegen deinem Geburtstag, sondern einfach so. 🌷 Du bist mir wichtiger, als ich vielleicht manchmal zeige.
+</p>
+
+<p>
+Vielleicht können wir die Tage oder Wochen mal in Ruhe ein kleines Getränk trinken oder einfach nur spazieren gehen. ☕🚶‍♂️🚶‍♀️ Ganz ohne Druck oder Erwartungen. Einfach nur, um uns wieder ein bisschen näher zu sein. ✨
+</p>
+
+<p>
+Egal wie du dich entscheidest – ich bin einfach froh, dass wir wieder mehr schreiben und dass du wieder ein Teil meines Alltags bist. 🌹 Pass gut auf dich auf, und lass es mich wissen, wenn du dich mal auf einen Kaffee treffen magst. 😊❤️
+</p>
+
+<button class="btn" onclick="showMessage()">
+💌 Eine kleine Überraschung
+</button>
+
+<div id="surprise"></div>
+
+<div class="footer">
+❤️ Mit liebevollen Gedanken ❤️
+    Alfa Balde 💻
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+// Efeito de digitação
+
+const text =
+"Manche Menschen bleiben besonders – egal wie viel Zeit vergeht. ❤️";
+
+let i = 0;
+
+function typeWriter(){
+
+    if(i < text.length){
+
+        document.getElementById("typing").innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typeWriter,60);
+    }
+}
+
+typeWriter();
+
+// Mensagem surpresa
+
+function showMessage(){
+
+document.getElementById("surprise").innerHTML =
+"🌹 Manchmal schenkt das Leben Menschen eine zweite Chance, sich auf eine schönere und reifere Weise wiederzufinden. ❤️";
+}
+
+// Corações
+
+for(let i=0;i<25;i++){
+
+let heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=
+(Math.random()*8+6)+"s";
+
+document.body.appendChild(heart);
+}
+
+// Flores
+
+for(let i=0;i<20;i++){
+
+let flower=document.createElement("div");
+
+flower.classList.add("flower");
+
+flower.innerHTML="🌸";
+
+flower.style.left=Math.random()*100+"vw";
+
+flower.style.animationDuration=
+(Math.random()*10+8)+"s";
+
+document.body.appendChild(flower);
+}
+
+</script>
+
+</body>
+</html>
