@@ -4,145 +4,67 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Für Dich Rahwa❤️</title>
+<link rel="stylesheet" href="style.css">
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Segoe UI',sans-serif;
-    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
-    min-height:100vh;
-    overflow-x:hidden;
-    color:#5a3d42;
-}
-
-.container{
-    width:90%;
-    max-width:900px;
-    margin:50px auto;
-    z-index:2;
-    position:relative;
-}
-
-.card{
-    background:rgba(255,255,255,0.85);
-    backdrop-filter:blur(10px);
-    padding:40px;
-    border-radius:25px;
-    box-shadow:0 10px 40px rgba(0,0,0,.15);
-    animation:fadeIn 2s ease;
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-h1{
-    text-align:center;
-    color:#c86b85;
-    margin-bottom:15px;
-    font-size:2rem;
-}
-
-.subtitle{
-    text-align:center;
-    margin-bottom:30px;
-    color:#8d5b68;
-}
-
-p{
-    line-height:1.9;
-    margin-bottom:25px;
-    font-size:1.1rem;
-    text-align:center;
-}
-
-.btn{
-    display:block;
-    margin:30px auto;
-    padding:15px 35px;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
-    background:#c86b85;
-    color:white;
-    font-size:1rem;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
-}
-
-#surprise{
-    text-align:center;
-    color:#c86b85;
-    font-size:1.2rem;
-    margin-top:15px;
-    font-weight:bold;
-}
-
-.footer{
-    text-align:center;
-    margin-top:30px;
-    color:#8d5b68;
-}
-
-.heart{
-    position:fixed;
-    font-size:20px;
-    animation:floatUp linear infinite;
-    opacity:.8;
-}
-
-@keyframes floatUp{
-    from{
-        transform:translateY(100vh);
-        opacity:1;
-    }
-    to{
-        transform:translateY(-100px);
-        opacity:0;
-    }
-}
-
-.flower{
-    position:fixed;
-    font-size:22px;
-    animation:fall linear infinite;
-}
-
-@keyframes fall{
-    from{
-        transform:translateY(-100px) rotate(0deg);
-    }
-    to{
-        transform:translateY(110vh) rotate(360deg);
-    }
-}
-
-</style>
 </head>
 
 <body>
+
+<h3 class="music-title">
+🎵 Unser Lied
+</h3>
+
+
+<audio controls loop>
+    <source src="musik.mp3" type="audio/mpeg">
+</audio>
 
 <div class="container">
 
 <div class="card">
 
 <h1>🌹Für Dich Rahwa🌹</h1>
+<img src="img/foto.jpeg" alt="Unsere Erinnerung" class="photo">
+
+<h2 class="timeline-title">
+✨ Unsere Geschichte ✨
+</h2>
+
+<div class="timeline">
+
+<div>
+🌷05-2025 - Kennengelernt
+</div>
+
+<div>
+💫 2026 - Viele Erinnerungen
+</div>
+
+<div>
+🌹2026 - Wieder näher gekommen
+</div>
+
+</div>
+
+<h2 class="places-title">
+📍 Unsere Orte
+</h2>
+
+<div class="places">
+
+<div class="place">
+📍 Hamburg 🇩🇪
+</div>
+
+<div class="place">
+❤️
+</div>
+
+<div class="place">
+📍 Berlin 🇩🇪
+</div>
+
+</div>
 
 <p class="subtitle" id="typing"></p>
 
@@ -170,15 +92,83 @@ Vielleicht können wir die Tage oder Wochen mal in Ruhe ein kleines Getränk tri
 Egal wie du dich entscheidest – ich bin einfach froh, dass wir wieder mehr schreiben und dass du wieder ein Teil meines Alltags bist. 🌹 Pass gut auf dich auf, und lass es mich wissen, wenn du dich mal auf einen Kaffee treffen magst. 😊❤️
 </p>
 
+<div class="gallery">
+
+<img src="img/agaçado.jpeg">
+
+<img src="img/muchila.jpeg">
+
+<img src="img/celular.jpeg">
+
+</div>
+
+<div class="counter">
+    ❤️ Wir kennen uns seit
+    <span id="daysCounter"></span>
+    Tagen.
+</div>
+
 <button class="btn" onclick="showMessage()">
 💌 Eine kleine Überraschung
 </button>
 
 <div id="surprise"></div>
 
+<button class="btn" onclick="toggleLetter()">
+💌 Brief öffnen
+</button>
+
+<div id="letter" class="hidden-letter">
+
+<h2>🌹 Ein kleiner Brief für dich 🌹</h2>
+
+<p>
+Manchmal bringt uns das Leben auf unterschiedliche Wege.
+Doch manche Menschen bleiben trotz allem etwas Besonderes.
+</p>
+
+<p>
+Ich weiß nicht, was die Zukunft bringt,
+aber ich freue mich über jeden Schritt,
+den wir wieder aufeinander zugehen.
+</p>
+
+<p>
+Danke für die Gespräche,
+für die Erinnerungen
+und dafür, dass wir wieder mehr Kontakt haben. ❤️
+</p>
+
+<p>
+Vielleicht beginnt etwas Schönes nicht dort,
+wo alles perfekt war,
+sondern dort,
+wo beide bereit sind,
+einander wieder neu kennenzulernen. ❤️
+</p>
+
+</div>
+
+<div class="coffee-countdown">
+
+☕ Vielleicht unser Kaffee in
+
+<span id="coffeeDays"></span>
+
+Tagen ❤️
+
+</div>
+
 <div class="footer">
-❤️ Mit liebevollen Gedanken ❤️
-    Alfa Balde 💻
+    ❤️ Mit liebevollen Gedanken ❤️
+
+<p>
+Alfa Baldé 💻
+</p>
+
+<p>
+Hamburg, Deutschland 🇩🇪
+</p>
 </div>
 
 </div>
@@ -216,6 +206,22 @@ document.getElementById("surprise").innerHTML =
 "🌹 Manchmal schenkt das Leben Menschen eine zweite Chance, sich auf eine schönere und reifere Weise wiederzufinden. ❤️";
 }
 
+//Dia que nos conhecemos
+const firstDay = new Date("2026-01-01");
+
+const today = new Date();
+
+const difference =
+today - firstDay;
+
+const days =
+Math.floor(
+difference / (1000*60*60*24)
+);
+
+document.getElementById("daysCounter")
+.innerHTML = days;
+
 // Corações
 
 for(let i=0;i<25;i++){
@@ -251,6 +257,51 @@ flower.style.animationDuration=
 
 document.body.appendChild(flower);
 }
+
+// estrelas
+for(let i=0;i<20;i++){
+
+let star=document.createElement("div");
+
+star.classList.add("star");
+
+star.innerHTML="✨";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.animationDuration=
+(Math.random()*12+6)+"s";
+
+document.body.appendChild(star);
+
+}
+
+function toggleLetter(){
+
+document
+.getElementById("letter")
+.classList.toggle("show");
+
+}
+
+// Encontro
+const meetingDate =
+new Date("2026-07-10");
+
+const todayDate =
+new Date();
+
+const diff =
+meetingDate - todayDate;
+
+const daysLeft =
+Math.ceil(
+diff / (1000 * 60 * 60 * 24)
+);
+
+document.getElementById("coffeeDays")
+.innerHTML = daysLeft;
+
 
 </script>
 
