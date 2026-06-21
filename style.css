@@ -15,10 +15,20 @@ body{
     color:#5a3d42;
 }
 
+.music-container{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.music-title{
+    color:#c86b85;
+    margin-bottom:15px;
+    text-align:center;
+}
+
 h3{
     text-align:left;
-    color:#7b1f39;
-    margin-top: 15px;
+    color:#c86b85;
     margin-bottom:15px;
     font-size:2rem;
 }
@@ -29,9 +39,6 @@ h3{
     margin:20px auto;
     border-radius:20px;
     box-shadow:0 10px 25px rgba(0,0,0,.2);
-}
-
-.photo{
     transition:.4s;
 }
 
@@ -59,6 +66,10 @@ h3{
     border-radius:15px;
 }
 
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(200,107,133,.6);
+}
 
 .places-title{
     text-align:center;
@@ -173,6 +184,28 @@ p{
     transform:scale(1.05);
 }
 
+.star{
+    position:fixed;
+    font-size:18px;
+    animation:fall linear infinite;
+    opacity:.8;
+}
+
+.coffee-countdown{
+    text-align:center;
+    font-size:1.3rem;
+    color:#c86b85;
+    margin-top:30px;
+    font-weight:bold;
+}
+
+.star{
+    position:fixed;
+    font-size:18px;
+    animation:fall linear infinite;
+    opacity:.8;
+}
+
 #surprise{
     text-align:center;
     color:#c86b85;
@@ -206,21 +239,6 @@ p{
         opacity:1;
         transform:translateY(0);
     }
-}
-
-.coffee-countdown{
-    text-align:center;
-    font-size:1.3rem;
-    color:#c86b85;
-    margin-top:30px;
-    font-weight:bold;
-}
-
-.star{
-    position:fixed;
-    font-size:18px;
-    animation:fall linear infinite;
-    opacity:.8;
 }
 
 .footer{
